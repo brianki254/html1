@@ -1,4 +1,4 @@
 function myFunction()
 {
-  document.getElementById("demo").InnerHTML = "paragraph changed.";
+  document.getElementById("demo").innerHTML = "paragraph changed.";
 }
