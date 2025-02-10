@@ -1,0 +1,12 @@
+<!Doctype html>
+<html>
+  <body>
+    <h2> Demo external JavaSript</h2>
+    <p id ="demo"> a paragraph</p>
+    <button type ="button" onclick="myFunction()">Try it</button>
+    <p>This example links to myScript.js.</p>
+    <p>(my function is stored in "myScript.js)</p>
+    <script src="https://github.com/brianki254/html1/blob/main/myScript.js"></script>
+    <a href="./index.html"> <h1> return to home page </h1> </a>
+  </body>
+</html>
