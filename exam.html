@@ -1,0 +1,99 @@
+<! DOCTYPE html>
+<html>
+  <head>
+    <title>
+      EatNow cafe
+    </title>
+    <style>
+      body{font-family:Arial; margin:20px;}
+      h1{colour:purple; text-align:center;}
+      container
+      {
+        background-colour:white;
+        padding:20px
+        border:1px solid black
+      }
+      button
+      {
+        background-colour:blue;
+        color:white;
+        padding:10px 10px;
+      }
+      updatedMenu
+      {
+        background-colour:white;
+        padding:20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>EatNow Cafe</h1>
+      <p id="greeting"></p>
+      <h2>Our menu</h2>
+      <ol id="menuList"></ol>
+      <button id="sugestButton"> suggest a new dish </button>
+      <div id="updatedMenu">
+        <h2>updated menu</h2>
+        <ol id="updatedMenuList"></ol>
+        <p id="thank you"></p>
+      </div>
+      </div>
+    <script>
+      //menu
+      var menu =
+        [
+          "rice and stew","ugali and greens","tea","soft drinks","chicken and fries"   
+        ];
+      //display menu
+      function showMenu(items,listid)
+      {
+        var menu=document.getElementById(listid);
+        //menu loop
+        for (var i=0;i<items.length;i++)
+        {
+          var listItems=document.createElement("li");
+          listItem.textContent=items[i];
+          menuList.appendchild(listitem);
+        }
+      }
+      //action when page loads
+      window.onload=function()
+      {
+        //user name
+        var name=prompt("welcome to Eatnow cafe.enter your first name");
+        //no name entered
+        if(name===""||name===null)
+        {
+          name="guest";
+        }
+        //welcome message
+        alert("hello"+name+"welcome to eatnow cafe");
+        //show menu
+        showMenu(menu,"menuList");
+        //suggestion button
+        document.getElementById("sugestButton").onclick=function()
+        {
+          var newdish=prompt("would you like to suggest a new dish");
+          //check input
+          if(newdish===""||newdish===null)
+          {
+            alert("invalid input");
+          }
+            //add item
+          else
+          {
+            menu.push(newdish);
+            //show updated list
+            showMenu(menu,"updatedMenuList");
+            //update menu section
+            document.getElementById("UpdatedMenu").style.display="block";
+          }
+        };
+      };
+        
+        
+    </script>
+  </body>
+</html>
+  
